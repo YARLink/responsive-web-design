@@ -1,0 +1,246 @@
+.header {
+	background-image: url('../images/football.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	&-wrap {
+		display: flex;
+		flex-direction: column;
+		margin: auto; 
+		max-width: 1532px;
+	}
+	&__top {
+		padding-top: 53px;
+		display: flex;
+		justify-content: space-between;
+		&__title {
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 34px;
+			text-transform: uppercase;
+			letter-spacing: 0.7px;
+			color:#ffffff;
+		}	
+	}
+	&__center {
+		margin: 296px auto 0px;
+		display: flex;
+		flex-direction: column;
+		&__title {
+			color: #ffffff;
+			font-size: 90px;
+			font-weight: 700;
+			line-height: 100px;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			&--first {
+				position: relative;
+				z-index: 200;
+			}
+			&--mod {
+				z-index: 1;
+				margin-left: 456px;
+				position: relative;
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					left: -151px;
+					width: 406px;
+					height: 4px;
+					transform: rotate(129deg);
+					border: 1px solid #5e42b0;
+					background-color: #5e42b0;
+				}
+			}
+		}
+	}
+}
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	&__go {
+		margin-left: 50px;
+		&:hover .nav__go__link {
+			color: #e7e7e7;
+		}
+		&:nth-child(1) {
+			margin-left: 0;
+		}
+		&__link {
+			text-decoration: none;
+			color: #9071ea;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 34px;
+			text-transform: uppercase;
+			letter-spacing: 0.7px;
+
+		}
+ 
+	}
+
+}	
+.button-app {
+	display: flex;
+	justify-content: center;
+	margin-top: 190px;
+	padding-bottom: 110px;
+	&--top {
+		display: none;
+	}
+}
+.link-app {
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.7px;
+	text-decoration: none;
+	background-color: #5e42b0;
+	box-shadow: 0 16px 24px #0a0e34;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	&:hover {
+		background-color: #737944;
+	}
+	&::before {
+		content:'';
+		background-image: url('../images/icon_google.png');
+		background-repeat: no-repeat;
+		width: 36px;
+		height: 39px;
+		display: block;
+		margin-right: 29px;
+	}	
+	&:nth-child(1) {
+		margin-right: 50px;
+		padding: 19px 67px 21px 43px;
+		&::before {
+	 		content:'';
+			background-image: url('../images/icon_apple.png');
+		}	
+	}
+	&:nth-child(2) {
+		padding: 19px 85px 19px 64px;
+	}
+	&__text {
+		margin-top: 5px;
+		color: #ffffff;
+		font-weight: 300;
+
+		&--mod {
+			color: #ffffff;
+			font-weight: 400;
+		}
+	}
+}
+@media (max-width: 1531px) {
+	.header__top {
+		padding-left: 2.6%;
+		padding-right: 2.6%;
+	}
+	.nav {
+		justify-content: space-around;
+		padding-left: 2.6%;
+		padding-right: 2.6%;
+		margin-top: 184px;
+	}
+	.header__center {
+		margin-top: 194px;
+	}
+	.header__center__title {
+		font-size: 64px;
+		margin-left: 11.6%;
+		line-height: 78px;
+		&--mod {
+			margin-left: 14.2%;
+			text-align: left;
+			position: relative;
+			letter-spacing: 3px;
+			&:before {
+				left: -18px;
+	    		top: 48px;
+	    		z-index: -1;
+			}
+		}
+	}
+	.button-app {
+		margin-top: 116px;
+	}
+}
+@media (max-width: 767px) {
+	.header__top {
+		order: 1;
+		padding-top: 39px;
+		justify-content: center;
+		&__title {
+			display: none;
+		}
+	}
+	.header__center {
+		order: 2;
+		margin-top: 141px;
+		&__title {
+			font-size: 32px;
+			line-height: 42px;
+			margin-left: 3.2%;
+			letter-spacing: 1.76px;
+			&--mod {
+				margin-left: 50px;
+				margin-top: 10px;
+				letter-spacing: 1.76px;
+				padding-right: 13px;
+				&:before {
+					width: 230px;
+					left: -17px;
+	    			top: 7px;
+				}
+			}
+		}
+	}
+	.wrap-position {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.nav {
+		order: 4;
+		margin-top: 45px;
+		flex-wrap: wrap;
+		padding: 0px 0px 10px;
+		justify-content: center;
+		&__go {
+			margin-left: 33px;
+		}
+	}
+	.button-app {
+		order: 3;
+		margin-top: 88px;
+		display: flex;
+		justify-content: center;
+		padding-bottom: 0px;
+	}
+	.link-app  {
+		font-size: 8px;
+		line-height: 12px;
+		&:before {
+			width: 15px;
+			height: 17px;
+			background-size: 100% auto;
+			margin-right: 9px;
+			margin-top: 6px;
+		}
+		&__text {
+			text-transform: uppercase;
+			letter-spacing: 0.4px;
+		}
+		&:nth-child(1) {
+			padding: 7px 17px 7px 20px;
+			margin-right: 8px;
+		}
+		&:nth-child(2) {
+			padding: 7px 30px 8px 30px;
+		}
+	}
+}

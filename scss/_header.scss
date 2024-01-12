@@ -90,6 +90,10 @@
 		display: none;
 	}
 }
+.link-wrap {
+	display: flex;
+	flex-flow: column wrap;
+}
 .link-app {
 	font-size: 14px;
 	line-height: 16px;
